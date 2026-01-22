@@ -2,7 +2,7 @@
 
 Ohjelma esittää simppeliä ToDo-sovellusta. Sovelluksessa voi lisätä tehtäviä ja merkata niitä tehdyiksi. Tehtäviä on mahdollista järjestää eräpäivän mukaan, tehtäviä voi myös suodattaa tehtyjen tehtävien perusteella.
 
-Esittelyvideon näkee täältä [https://www.youtube.com/shorts/iUBMVSivUqQ](https://www.youtube.com/shorts/iUBMVSivUqQ)
+Esittelyvideon näkee täältä [https://youtube.com/shorts/ucE7IMDAk1k](https://youtube.com/shorts/ucE7IMDAk1k?feature=share)
 
 ## Funktiot
 
