@@ -1,5 +1,6 @@
 package com.example.kotlinperusteet.domain
 
+
 val mockTasks = listOf(
     Task(1, "Kauppalista", "maitoa ja kahvia", 1, "20-01-2026", false),
     Task(2, "Läksyt", "Matikka kpl 4", 4, "06-01-2026", true),
