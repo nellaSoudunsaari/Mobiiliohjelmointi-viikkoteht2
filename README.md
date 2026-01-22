@@ -1,13 +1,8 @@
-# Mobiiliohjelmointi viikkotehtävä 1 - Kotlin-perusteet
+# Mobiiliohjelmointi viikkotehtävä 2 - ViewModel
 
 Ohjelma esittää simppeliä ToDo-sovellusta. Sovelluksessa voi lisätä tehtäviä ja merkata niitä tehdyiksi. Tehtäviä on mahdollista järjestää eräpäivän mukaan, tehtäviä voi myös suodattaa tehtyjen tehtävien perusteella.
 
 Esittelyvideon näkee täältä [https://www.youtube.com/shorts/iUBMVSivUqQ](https://www.youtube.com/shorts/iUBMVSivUqQ)
-
-## Mock Data
-
-Projektiin on luotu MockData.kt-tiedosto, jonka avulla sovellus näyttää ennalta määritettyjä tehtäviä, tehtävän rakenne ja muuttujat on määritetty Task.kt-tiedostossa. Tehtävän muuttujiin kuuluu tehtävän indeksi (id),
-otsikko (title), kuvaus (description), tärkeys (priority), eräpäivä (dueDate) ja mikäli tehtävä on merkattu tehdyksi (done).
 
 ## Funktiot
 
@@ -21,8 +16,21 @@ toggleDone-funktio mahdollistaa tehtävät merkkaamisen tehdyksi/keskeneräiseks
 
 **filterByDone**
 
-filterByDone-funktio suodattaa tehtävälistan tehtyjen tehtävien perusteella. Tämä funktio ei toimi täydellisesti.
+filterByDone-funktio suodattaa tehtävälistan tehtyjen tehtävien perusteella.
 
 **sortByDueDate**
 
 sortByDueDate-funktio järjestää tehtävälistan eräpäivän mukaan, kauimmainen eräpäivä ensin.
+
+**deleteTask**
+
+Poistaa tehtävän tehtävälistasta id:n perusteella.
+
+## Miten Compose-tilanhallinta toimii?
+
+Tila(state) on muuttuva arvo joka Compose:sta puhuttaessa vaikuttaa siihen miltä käyttöliittymä näyttää. Esimerkkejä muuttuvista tiloista ovat mm. listan sisältö, valittu/ei valittu checkbox ja tekstikentän sisältö.
+Kun tilan muutos havaitaan, Compose päivittää ne käyttöliittymän elementit, joihin tila on kytkettynä. Tätä kutsutaan myös nimellä rekompositio(eng. recomposition).
+
+## Miksi ViewModel on pelkkää remember:iä parempi?
+
+ViewModel on Android Architecture Components -komponentti, joka säilyttää tilan konfiguraation muutosten yli. Eli vaikka kääntäisit näyttöä, tila pysyy konfiguroituna. ViewModel myös erottaa toimintalogiikan käyttöliittymästä, helpottaa testaamista ja integroituu hyvin muiden Architecture Components -komponenttien kanssa. 
